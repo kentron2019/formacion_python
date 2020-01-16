@@ -18,16 +18,17 @@ if [ "$UID" != "0" ]; then
 	fi
 fi
 
-#echo '*** Crear un directorio en carpeta actual...'
+#echo '*** Crear un directorio en carpeta actual si no existe...'
 
 carpeta=`pwd`
-
-
 
 
 #Si no existe:
 if [ ! -d "${carpeta}"/test4 ]; then
   echo '*** No existe la carpeta test4'
+  $SUDO mkdir ${carpeta}/test4
+elif [ -d "${carpeta}"/test4 ] ; then
+  echo '*** Ya existe la carpeta test4, creamos la carpeta test5'
   $SUDO mkdir ${carpeta}/test4
 fi
 
