@@ -29,6 +29,7 @@ if [ ! -d "${carpeta}"/test4 ]; then
   cat /dev/null | $SUDO mkdir ${carpeta}/test4
 fi
 
+#Si existe
 if [ -d "${carpeta}"/test4 ] ; then
   echo '*** Ya existe la carpeta test4, creamos la carpeta test5'
   cat /dev/null | $SUDO mkdir ${carpeta}/test5
