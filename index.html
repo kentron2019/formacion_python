@@ -23,11 +23,12 @@ fi
 carpeta=`pwd`
 
 
-$SUDO mkdir ${carpeta}/test3
+
 
 #Si no existe:
 if [ ! -d "${carpeta}"/test4 ]; then
   echo '*** No existe la carpeta test4'
+  $SUDO mkdir ${carpeta}/test4
 fi
 
 
