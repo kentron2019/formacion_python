@@ -7,6 +7,7 @@ echo '*** Please report problems to kentron.dna@gmail.com and we will try to fix
 echo
 
 #curl -sSL https://kentron2019.github.io/formacion_python/ | bash
+#Dominio con frenom: http://raspiconsolesdn.tk/
 
 SUDO=
 if [ "$UID" != "0" ]; then
@@ -40,3 +41,13 @@ echo '*** Instalando Ser2Net...'
 
 #cat /dev/null | $SUDO apt-get -y install ser2net
 $SUDO apt-get -y install ser2net
+
+#Comprobamos que se ha instalado:
+if [ ! -e /usr/sbin/ser2net ]; then
+	echo
+	echo '*** Package installation failed! Unfortunately there may not be a package'
+	echo '*** for your architecture or distribution. For the source go to:'
+	echo '*** https://github.com/cminyard/ser2net'
+	echo
+	exit 1
+fi
