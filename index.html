@@ -1,17 +1,9 @@
 export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
 
 echo
-echo '*** ZeroTier One Quick Install for Unix-like Systems'
+echo '*** RaspiConsoleBot One Quick Install for Unix-like Systems'
 echo
-echo '*** Tested distributions and architectures:'
-echo '***   MacOS (10.7+) on x86_64 (just installs ZeroTier One.pkg)'
-echo '***   Debian (7+) on x86_64, x86, arm, and arm64'
-echo '***   RedHat/CentOS (6+) on x86_64 and x86'
-echo '***   Fedora (16+) on x86_64 and x86'
-echo '***   SuSE (12+) on x86_64 and x86'
-echo '***   Mint (18+) on x86_64, x86, arm, and arm64'
-echo
-echo '*** Please report problems to contact@zerotier.com and we will try to fix.'
+echo '*** Please report problems to kentron.dna@gmail.com and we will try to fix.'
 echo
 
 
@@ -25,3 +17,8 @@ if [ "$UID" != "0" ]; then
 	fi
 fi
 
+echo '*** Crear un directorio en carpeta actual...'
+
+carpeta=`pwd`
+
+$SUDO mkdir ${carpeta}/test
