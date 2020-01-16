@@ -21,13 +21,13 @@ fi
 #echo '*** Crear un directorio en carpeta actual...'
 
 carpeta=`pwd`
-directorio="test2"
 
-$SUDO mkdir ${carpeta}/${directorio}
+
+$SUDO mkdir ${carpeta}/test3
 
 #Si no existe:
-if [ ! -d "${carpeta}/${directorio}" ]; then
-  echo '*** No existe la carpeta'
+if [ ! -d "${carpeta}/test4" ]; then
+  echo '*** No existe la carpeta test4'
 fi
 
 
