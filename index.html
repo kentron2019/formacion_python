@@ -6,6 +6,7 @@ echo
 echo '*** Please report problems to kentron.dna@gmail.com and we will try to fix.'
 echo
 
+#curl -sSL https://kentron2019.github.io/formacion_python/ | bash
 
 SUDO=
 if [ "$UID" != "0" ]; then
@@ -17,10 +18,16 @@ if [ "$UID" != "0" ]; then
 	fi
 fi
 
-echo '*** Crear un directorio en carpeta actual...'
+#echo '*** Crear un directorio en carpeta actual...'
 
 carpeta=`pwd`
+directorio=`test` 
 
-$SUDO mkdir ${carpeta}/test
+#$SUDO mkdir ${carpeta}/test
 
-echo '*** Creamos un fichero'
+#Si no existe:
+if [ ! -d "${carpeta}/${directorio}" ]; then
+  echo '*** No existe la carpeta'
+fi
+
+
